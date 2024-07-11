@@ -63,16 +63,6 @@
 
       </div>
     </nav> 
-
-    <!--讀取圖示-->
-    <!-- <transition>
-      <div class="d-flex justify-content-center loading" v-show="$store.state.isLoading" :class="{'is-loading': $store.state.isLoading}">
-        <div class="spinner-border" role="status">
-          <span class="visually-hidden">Loading...</span>
-        </div>
-      </div>
-    </transition> -->
-    <!--讀取圖示-->
   
     <section class="section">
       <RouterView @cart-updated="getLengthFunc" @login="getLengthFunc"/>
@@ -219,7 +209,6 @@
       async getLengthFunc(){
         if(this.$store.state.isPass){
           const len = await this.cartTotalLength()
-          // console.log("RES2",this.cartLength)
           this.cartLength = len
         }
       },
@@ -227,7 +216,6 @@
       async cartTotalLength() {
         try {
           const response = await axios.get('api/shop/getlength/');
-          // console.log("totalen: ",response.data)
           return response.data.length;
 
         } catch (error) {
@@ -298,12 +286,5 @@
 
   .section {
     flex: 1;
-  }
-  .loading.is-loading {
-    display: flex !important;
-  }
-
-  .loading:not(.is-loading) {
-    display: none !important;
   }
 </style>
