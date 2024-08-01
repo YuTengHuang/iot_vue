@@ -86,7 +86,7 @@
 
             this.getCartData()
             document.title = "購物車"
-            // console.log('Cart:', this.cart);
+            
         },
 
         methods:{
@@ -98,12 +98,11 @@
                 await axios
                     .post("api/shop/getdata/")
                     .then(response =>{
-                        // console.log("response", response.data)
-                        
+                                  
                         setTimeout(() => {
 
                             this.cart = this.cart.concat(response.data);
-                            // console.log("CCATR", this.cart)   
+                             
                             this.cartTotalLength()
                             // eslint-disable-next-line no-undef
                             Swal.close()
@@ -124,7 +123,6 @@
                 return res
             },
 
-            // getActivePrice,
 
             TotalPrice() {
                 let totalprice = 0;
@@ -148,14 +146,13 @@
             },
 
             DeleteiTem(item){
-                // console.log("delete", item)
                 
                 this.toastStore.DeleteItem().then((result) => {
                     if (result.isConfirmed) {
                         axios
                             .delete('api/shop/DeleteiTem/', { data: { id: item.id } })
                             .then(response =>{
-                                // console.log("response",response)
+                              
                                 if (response.data.message === 'success'){
                                     // eslint-disable-next-line no-undef
                                     Swal.fire({
@@ -185,11 +182,11 @@
             },
             
             minusItem(item){
-                // console.log("min",item)
+             
                 axios
                     .post('api/shop/minusItem/', item)
                     .then(() =>{
-                        // console.log(response)
+                       
                         this.getCartData()
                         this.$emit('cart-updated');
                     })
@@ -200,11 +197,11 @@
             },
 
             plusItem(item){
-                // console.log("plu", item)
+            
                 axios
                     .post('api/shop/plusItem/', item)
                     .then(() =>{
-                        // console.log(response)
+            
                         this.getCartData()
                         this.$emit('cart-updated');  
                     })
