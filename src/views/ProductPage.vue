@@ -77,7 +77,7 @@ import { goBack } from '@/JSFunction/goback';
         await axios
           .get('api/productpageinfo/')
           .then(response => {
-            // console.log(response.data)
+
             this.products = response.data
             // eslint-disable-next-line no-undef
             Swal.close()
@@ -95,22 +95,6 @@ import { goBack } from '@/JSFunction/goback';
 
       goBack,
 
-      // AddToCart(product){
-      //   if (!this.$store.state.isPass) {
-      //       this.$router.push({ name: 'LogIn', query: { to: this.$route.path } });
-      //       return;
-      //   }
-      //   if (isNaN(this.quantity) || this.quantity < 1){
-      //       this.quantity = 1
-      //   }
-      //   const item = {
-      //       product: product,
-      //       quantity: this.quantity
-      //   }
-
-      //   this.$store.commit('AddToCart', item)
-      //   this.toastStore.addCartToast()
-      // },
     }
   }
 </script>
