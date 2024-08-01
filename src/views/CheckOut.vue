@@ -159,8 +159,6 @@ export default {
                         axios
                             .post('api/postOrder/', postData)
                             .then(response=>{
-                                // console.log(response.data)
-                                // console.log("CCC", this.cart)
                                 this.trackid  = ''
                                 this.trackid = response.data.trackid
                                 this.postDetail()
@@ -184,16 +182,12 @@ export default {
             await axios
                 .post('api/OrderDetails/', res)
                 .then(response =>{
-                    // console.log(response.data.message)
+        
                     if (response.data.message === 'success'){
                         this.toastStore.CheckOutOK().then((result) => {
                             if (result.isConfirmed) {
                                 this.$router.push("/CheckOutOk")
                                 this.$emit("cart-updated")
-                                // setTimeout(()=>{
-                                //     window.location.reload()
-                                // }, 0)
-                                // console.log("OKOK")
                             }
                         })
                     }else{
