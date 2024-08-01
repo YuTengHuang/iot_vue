@@ -122,9 +122,7 @@ export default {
                         this.$router.push('/');
                     }
                     this.$emit('login');
-                    // setTimeout(() => {
-                    //     window.location.reload();
-                    // }, 0);
+                
                 })
                 .catch(error =>{
                     console.log(error)
