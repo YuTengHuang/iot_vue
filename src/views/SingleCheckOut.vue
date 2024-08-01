@@ -163,12 +163,10 @@ export default {
                             order_amount: this.memberData.amount,
                             order_note: this.memberData.note,
                         }
-                        console.log("ASD", postData)
+                        
                         axios
                             .post('api/postOrder/', postData)
                             .then(response=>{
-                                // console.log(response.data)
-                                // console.log("CCC", this.cart)
                                 this.trackid  = ''
                                 this.trackid = response.data.trackid
                                 this.postDetail()
@@ -192,16 +190,12 @@ export default {
             await axios
                 .post('api/OrderDetails/', res)
                 .then(response =>{
-                    // console.log(response.data.message)
+    
                     if (response.data.message === 'success'){
                         this.toastStore.CheckOutOK().then((result) => {
                             if (result.isConfirmed) {
                                 this.$router.push("/CheckOutOk")
                                 this.$emit("cart-updated")
-                                // setTimeout(()=>{
-                                //     window.location.reload()
-                                // }, 0)
-                                // console.log("OKOK")
                             }
                         })
                     }else{
@@ -227,13 +221,10 @@ export default {
             await axios
                 .post(`api/SingleProductCheckOut${slug}`, this.productData)
                 .then(response => {
-
-                    // console.log("asdas", response.data)
+                    
                     const {...resData} = response.data
                     this.productData = {...resData}
-                    // console.log("AAAA", this.productData)
-
-
+                    
                     // eslint-disable-next-line no-undef
                     Swal.close()
                 })
