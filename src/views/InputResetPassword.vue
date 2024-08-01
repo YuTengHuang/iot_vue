@@ -60,19 +60,19 @@
                         return;
                     }else{
                         const currentUrl = window.location.href;
-                        // 使用 URLSearchParams 查詢字符串
+                        
                         const params = new URLSearchParams(currentUrl.split('?')[1]);
-                        // 從 URLSearchParams 中獲取 token
+                        
                         const token = params.get('token');
-                        // console.log(token);
+                        
                         const config = {
                             headers: {
-                                'Authorization': `Bearer ${token}` // 將 token 添加到標頭中
+                                'Authorization': `Bearer ${token}` 
                             }
                         };
 
                         const res = await axios.post('api/resetpassword/', this.sendData, config)
-                        // console.log("RES",res)
+                        
                         if (res.status === 200){
                             this.toastStore.ResetPasswordOK().then(res =>{
                                 if (res.isConfirmed) {
