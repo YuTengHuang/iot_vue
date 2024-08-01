@@ -67,7 +67,6 @@
         await axios
           .get('api/productsimpleinfo/')
           .then(response => {
-            // console.log(response.data)
             this.products = response.data;
           })
           .catch(error => {
