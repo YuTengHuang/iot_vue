@@ -117,7 +117,6 @@
                 try{
                     const res = await axios.get(`api/getOneDateils/${this.trackid}`)
                     this.resData = res.data
-                    // console.log(this.resData)
                 }
                 catch(error){
                     console.log(error)
