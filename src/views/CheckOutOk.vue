@@ -81,10 +81,10 @@
                 
                 try{
                     const res = await axios.get('api/getOrderid/')
-                    // console.log(res.data)
+                    
                     this.orderData = res.data
                     const details = await axios.get('api/OrderDetails/')
-                    // console.log(details.data)
+              
                     this.detailsData = details.data
 
                 }catch (error){
