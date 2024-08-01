@@ -89,7 +89,6 @@
                 try{
                     const res = await axios.post('api/getAllOrder/')
                     this.orderData = res.data
-                    // console.log("WWWW",this.orderData)
                 }
                 catch (error){
                     console.log(error)
