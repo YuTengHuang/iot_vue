@@ -127,19 +127,6 @@ export default {
                 })
                 .catch(error => {
                     console.log(error)
-                    // if (error.response) {
-                        
-                    //     if (error.response.status === 400 || error.response.status === 500) {
-                    //         const errorMessage = error.response.data.detail || "此帳號或信箱已有人註冊!";
-                    //         this.errors.push(errorMessage);
-                    //     } else {
-                    //         console.log('Unexpected error:', error.response.status);
-                    //         this.errors.push("一個意料之外的問題發生了");
-                    //     }
-                    // } else {
-                    //     console.log('Unexpected error:', error);
-                    //     this.errors.push("一個非 4xx 或 5xx 的問題發生了");
-                    // }
                 })
 
             }
