@@ -105,7 +105,6 @@
                         this.memberData  = { 
                             ...userData
                         }
-                        // console.log("NNNNN",response.data.address_default)
                         this.userStore.setNikeName(response.data.member_nickname)
                     })
                     .catch(error=>{
@@ -137,9 +136,6 @@
                         };
                         this.toastStore.AccountUpdateOK()
                         this.getMemberInfo()
-                        // setTimeout(()=>{
-                        //     window.location.reload();
-                        // }, 1000)
                         
                     })
                     .catch(error=>{
