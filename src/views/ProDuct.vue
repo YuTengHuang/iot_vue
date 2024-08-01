@@ -80,10 +80,7 @@
                     <img :src="this.products.get_image3" class="img-thumbnail">
                 </figure>
             </div>
-            <!-- <div class="col-lg-6 text-center">
-                <h1>我不知道要輸入甚麼</h1>
-                <h1>反正這區塊也能放圖</h1>
-            </div> -->
+
         </div>
 
     </div>
@@ -169,11 +166,8 @@
 
                         this.products = response.data[0].pid
                         this.product_specs = response.data[0].product_specs
-                        
-                        // console.log("商品",this.products)
-                        // console.log("規格",this.product_specs)
-                        
 
+                        
                         document.title = this.products.product_name
                         
                         this.$nextTick(() => {
@@ -194,7 +188,7 @@
                                 this.product_specs.forEach(product => {
                                     if (product.color !== null && product.color !== undefined) {
                                         const inputElement2 = document.getElementById('color' + product.color);
-                                        // console.log(inputElement2)
+                                    
                                         if (inputElement2) {
                                             inputElement2.checked = true;
                                             this.color = product.color
@@ -231,7 +225,6 @@
             QuantityCantInputZero(){
                 if (isNaN(this.quantity) || this.quantity < 1){
                     this.quantity = 1
-                    // console.log(this.totalInputs)
                 }
             },
             
@@ -279,7 +272,7 @@
                     await axios
                         .post('api/shop/postdata/', shopcartData)
                         .then(response =>{
-                            // console.log(response.data.message)
+                       
                             if (response.data.message === 'success'){
                                 this.toastStore.addCartToast()
                                 this.$emit('cart-updated');
