@@ -7,18 +7,8 @@ export default createStore({
         token: ''
     }, 
     mutations:{
-
         setIsLoading(state, status){
             state.isLoading = status
         },
-        
     },
-
-    actions:{
-
-    },
-
-    module:{
-
-    }
 })
