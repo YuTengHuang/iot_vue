@@ -1,6 +1,34 @@
 # iotshop_frontend
 
-This template should help get you started developing with Vue 3 in Vite.
+Image:
+- HomePage
+<img src="public/demo-img/homepage.png">
+
+- Products
+<img src="public/demo-img/allProduct.PNG">
+
+- Product Detail 
+<img src="public/demo-img/product_detail.PNG">
+
+- Cart 
+<img src="public/demo-img/cart.PNG">
+
+- Checkout 
+<img src="public/demo-img/checkout.png">
+
+- Order 
+<img src="public/demo-img/ty.PNG">
+
+- Order Detail
+<img src="public/demo-img/order_detail.png">
+
+- Order History 
+<img src="public/demo-img/history_order.png">
+
+- Reset Password 
+<img src="public/demo-img/reset_password_email.PNG">
+<img src="public/demo-img/resetpassword.PNG">
+
 
 ## Recommended IDE Setup
 
