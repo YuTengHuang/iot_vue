@@ -1,5 +1,4 @@
 # iotshop_frontend
-Demo Website: [Website](http://54.250.153.54/) \
 BackEnd: [這裡](https://github.com/YuTengHuang/iotshopping) \
 Image:
 - HomePage
