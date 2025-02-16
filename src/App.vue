@@ -253,12 +253,6 @@
     font-weight: bold !important;
     transition: .3s;
   }
-  
-  @media (max-width: 768px) {
-    .qrcode{
-      display: none;
-    }
-  }
 
   @media (min-width: 768px) {
     .qrcode img{
